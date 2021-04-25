@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScheduleViewController" customModule="vktime" customModuleProvider="target">
+            <connections>
+                <outlet property="dayView" destination="Ru4-Rd-SYx" id="eI4-p3-d3r"/>
+                <outlet property="editButton" destination="uTP-cc-oGp" id="h3E-BS-U7v"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ru4-Rd-SYx" customClass="DayView" customModule="CalendarKit">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTP-cc-oGp">
+                    <rect key="frame" x="344" y="792" width="50" height="50"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Ucf-ba-CdN"/>
+                        <constraint firstAttribute="height" constant="50" id="YYx-3s-zBK"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="pencil" catalog="system"/>
+                    <connections>
+                        <action selector="onDidEditTapped:" destination="-1" eventType="touchUpInside" id="1Ex-Ey-eXK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Ru4-Rd-SYx" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="8hx-Ob-y5J"/>
+                <constraint firstItem="Ru4-Rd-SYx" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Lnb-gj-OGV"/>
+                <constraint firstItem="Ru4-Rd-SYx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="MzM-fJ-XJa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uTP-cc-oGp" secondAttribute="trailing" constant="20" id="kr6-ML-Q1E"/>
+                <constraint firstItem="Ru4-Rd-SYx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lhx-64-zB9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uTP-cc-oGp" secondAttribute="bottom" constant="20" id="sSS-gK-qDY"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="127.53623188405798" y="108.48214285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
